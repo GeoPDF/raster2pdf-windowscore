@@ -11,12 +11,18 @@ This project was created in Windows 10 running Docker for Windows using Windows 
 You will need the TerraGo Publisher for Raster installer which you should already have, but if you need access to the installer contact support@terragotech.com
 
 ## Setup
-1. Copy **TerraGo_Publisher_for_Raster.exe** in to the root of this project
-2. Build image
+1. Clone the project
+
+`git clone https://github.com/GeoPDF/raster2pdf-windowscore`
+
+`cd raster2pdf-windowscore`
+
+2. Copy **TerraGo_Publisher_for_Raster.exe** in to the root of this project
+3. Build image
 
 `docker build -t raster2pdf .`
 
-3. Verify
+4. Verify
 
 `docker run --rm raster2pdf raster2pdf --version`
 
