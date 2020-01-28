@@ -20,6 +20,8 @@ You will need the TerraGo Publisher for Raster installer which you should alread
 
 `docker run --rm raster2pdf raster2pdf --version`
 
+![raster2pdfversion](assets/images/raster2pdf-version.png "raster2pdf version")
+
 ## Sample data
 You can download some sample GeoTIFF files from [here](https://download.osgeo.org/geotiff/samples/).  I've included a file from the `/usgs/` folder with this project that are copied to `c:\app\data` inside the container.
 
@@ -27,6 +29,8 @@ You can download some sample GeoTIFF files from [here](https://download.osgeo.or
 Open a PowerShell window and go into the project folder and execute...
 
 `docker run -it --rm -v "$(pwd)\assets\data:c:\app\data" raster2pdf c:\app\data\run.bat`
+
+![run-bat](assets/images/run-bat.png "run.bat")
 
 ## Support
 If you need help with this sample open an issue here on GitHub or email jbfreels@terragotech.com
