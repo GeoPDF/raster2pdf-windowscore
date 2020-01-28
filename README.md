@@ -29,9 +29,9 @@ Open a PowerShell window and go into the project folder and execute...
 `docker run -it --rm -v "$(pwd)\assets\data:c:\app\data" raster2pdf c:\app\data\run.bat`
 
 ## Support
-If you need help with this sample open an issue here on github or email jbfreels@terragotech.com
+If you need help with this sample open an issue here on GitHub or email jbfreels@terragotech.com
 
-## licensing
+## Licensing
 By default, you'll get watermarks if you're unlicensed.  Included is a `PUB4R.xml` containing the IP address to a concurrent license server.
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
@@ -39,4 +39,11 @@ By default, you'll get watermarks if you're unlicensed.  Included is a `PUB4R.xm
     <licenseServer>192.168.1.70</licenseServer>
 </Config>
 ```
-Update the IP address to your license server.
+Update the IP address to your license server.  If the 
+*licenseServer* IP is not set, the product will be unlicensed 
+and the output GeoPDF files will be watermarked.
+
+>Note: If the license server is set to an IP that is **not** 
+a license server, the process will go very slow as the 
+product is trying to look for a license and has a long 
+timeout.

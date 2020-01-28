@@ -1,5 +1,4 @@
-FROM  mcr.microsoft.com/windows/servercore:ltsc2019
-
+FROM mcr.microsoft.com/windows:1903
 LABEL maintainer="jbfreels@terragotech.com"
 
 WORKDIR /app
@@ -12,6 +11,8 @@ RUN Start-Process -FilePath \
     @('/S', '/v', '/qn') -PassThru | Wait-Process; \
     Remove-Item c:\app\TerraGo_Publisher_for_Raster.exe -Force
 
+# PUB4R.xml is used to set the concurrent license server
+# set <licenseServer> tag to the IP of your license server
 RUN New-Item -Path 'C:\ProgramData\TerraGo Technologies\TerraGo Publisher for Raster' -ItemType 'directory'
 
 COPY ["assets/PUB4R.xml", "C:/ProgramData/TerraGo Technologies/TerraGo Publisher for Raster/" ]
