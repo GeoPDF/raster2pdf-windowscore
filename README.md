@@ -17,6 +17,9 @@ This project will outline installing and running TerraGo Publisher For Raster in
 You can download some sample GeoTIFF files from [here](https://download.osgeo.org/geotiff/samples/).  I've included two files from the `/usgs/` folder with this project that are copied to `c:\app\data`...
 
 ## Running
-Open a PowerShell window and execute...
+Open a PowerShell window and go into the project folder and execute...
 
 `docker run -it --rm -v "$(pwd)\data:c:\app\data" raster2pdf`
+
+## Support
+If you need help with this sample open an issue here on github or email jbfreels@terragotech.com
