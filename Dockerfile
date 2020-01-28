@@ -14,4 +14,4 @@ RUN Start-Process -FilePath \
 
 RUN New-Item -Path 'C:\ProgramData\TerraGo Technologies\TerraGo Publisher for Raster' -ItemType 'directory'
 
-COPY ["PUB4R.xml", "C:/ProgramData/TerraGo Technologies/TerraGo Publisher for Raster/" ]
+COPY ["assets/PUB4R.xml", "C:/ProgramData/TerraGo Technologies/TerraGo Publisher for Raster/" ]
